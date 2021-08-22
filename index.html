@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/style.css" />
-    <title>Document</title>
+    <title>TSM with Ants</title>
   </head>
   <body>
-    <script src="./src/scripts/script.js"></script>
+    <section>
+      <label>Draw</label>
+      <input type="checkbox" checked oninput="changeDrawStatus()" />
+      <label>cities count</label>
+      <input type="number" min="2" oninput="changeNumber(this.value)" />
+      <label>FrameRate</label>
+      <input
+        type="range"
+        class="slider"
+        min="20"
+        max="2000"
+        value="50"
+        onchange="changeFrameRate(this.value)"
+      />
+      <button onclick="start()">Start</button>
+    </section>
+    <canvas id="trying" height="500px" width="500px"></canvas>
+    <canvas id="best" height="500px" width="500px"></canvas>
+    <script defer src="./src/scripts/algorithm.js"></script>
+    <script defer src="./src/scripts/script.js"></script>
   </body>
 </html>

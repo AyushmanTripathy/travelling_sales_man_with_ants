@@ -6,11 +6,86 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #202124;
   font-family: "Roboto Mono", monospace;
   height: 100vh;
   width: 100vw;
   color: #bbb;
+}
+
+canvas {
+  padding: 10px;
+  border: 1px #bbb solid;
+  margin-left: 10px;
+}
+
+section {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: center;
+  top: 40px;
+}
+
+input {
+  color: #bbb;
+  border: 1px #bbb solid;
+  background-color: #202124;
+  margin-right: 8px;
+}
+
+input[type="number"] {
+  height: 20px;
+  width: 50px;
+}
+
+button {
+  color: #bbb;
+  border: 1px #bbb solid;
+  background-color: #202124;
+  padding: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 1px;
+  background: #202124;
+  outline: none;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+}
+
+/* for chrome/safari */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 40px;
+  width: 10px;
+  background: #202124;
+  cursor: pointer;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+/* for firefox */
+.slider::-moz-range-thumb {
+  height: 5px;
+  width: 5px;
+  background: #202124;
+  cursor: pointer;
+  border: 5px solid #bbb;
+  border-radius: 4px;
 }
 /*# sourceMappingURL=style.css.map */

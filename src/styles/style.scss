@@ -3,10 +3,16 @@ $bg: #202124;
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300&display=swap");
 
-@mixin centered() {
+@mixin centered {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin input {
+  color: $sec;
+  border: 1px $sec solid;
+  background-color: $bg;
 }
 
 body {
@@ -18,4 +24,66 @@ body {
   height: 100vh;
   width: 100vw;
   color: $sec;
+}
+
+canvas {
+  padding: 10px;
+  border: 1px $sec solid;
+  margin-left: 10px;
+}
+
+section {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+
+  @include centered;
+  top: 40px;
+}
+
+input {
+  @include input;
+  margin-right: 8px;
+}
+
+input[type="number"] {
+  height: 20px;
+  width: 50px;
+}
+
+button {
+  @include input;
+  padding: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 1px;
+  background: $bg;
+  outline: none;
+  border: 1px solid $sec;
+  border-radius: 8px;
+}
+
+/* for chrome/safari */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 40px;
+  width: 10px;
+  background: $bg;
+  cursor: pointer;
+  border: 1px solid $sec;
+  border-radius: 4px;
+}
+
+/* for firefox */
+.slider::-moz-range-thumb {
+  height: 5px;
+  width: 5px;
+  background: $bg;
+  cursor: pointer;
+  border: 5px solid $sec;
+  border-radius: 4px;
 }
